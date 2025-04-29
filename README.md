@@ -2,4 +2,4 @@
 
 Setting Up Argo Environment usinf Terraform
 
-Branch protection is disabled to main
+Branch protection is enabled to main. Approval disabled for PRs
