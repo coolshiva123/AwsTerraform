@@ -2,4 +2,4 @@
 
 Setting Up Argo Environment usinf Terraform
 
-Main branch protection on pushes directly is enabled
+Branch protection is disabled to main
