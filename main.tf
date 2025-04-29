@@ -33,6 +33,15 @@ resource "aws_security_group_rule" "minikube_ingress" {
   description       = "Allow SSH access"
 }
 
+resource "aws_security_group_rule" "minikube_ingress_argo" {
+  type              = "ingress"
+  from_port         = 8080
+  to_port           = 8080
+  protocol          = "tcp"
+  cidr_blocks       = ["0.0.0.0/0"]
+  security_group_id = aws_security_group.minikube01_secgrp.id
+  description       = "Allow Argo access"
+}
 resource "aws_security_group_rule" "minikube_icmp_ingress" {
   type              = "ingress"
   from_port         = -1
