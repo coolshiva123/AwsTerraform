@@ -11,7 +11,7 @@ spec:
     path: ArgoLearn/ArgoSamples/01.HelloWorld
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: hw
   syncPolicy:
     automated:
       prune: false
