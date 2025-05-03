@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hw-argo-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/coolshiva123/AwsTerraform
+    targetRevision: HEAD
+    path: ArgoLearn/ArgoSamples/HelloWorld
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true 
+      
