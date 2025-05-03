@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/coolshiva123/AwsTerraform
     targetRevision: HEAD
-    path: ArgoLearn/ArgoSamples/HelloWorld
+    path: ArgoLearn/ArgoSamples/01.HelloWorld
   destination:
     server: https://kubernetes.default.svc
     namespace: default
@@ -18,4 +18,3 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true 
-      
