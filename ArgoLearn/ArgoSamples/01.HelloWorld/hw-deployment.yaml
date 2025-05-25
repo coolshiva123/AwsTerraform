@@ -21,13 +21,13 @@ spec:
         - containerPort: 80
 
 ---
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: hello-world-config
-  namespace: hw
-data:
-  APP_NAME: "HelloWorldApp"
-  APP_ENV: "production"
-  APP_VERSION: "1.0.0"
-  BLUE: "Blah"
+#apiVersion: v1
+#kind: ConfigMap
+#metadata:
+#  name: hello-world-config
+#  namespace: hw
+#data:
+#  APP_NAME: "HelloWorldApp"
+#  APP_ENV: "production"
+#  APP_VERSION: "1.0.0"
+#  BLUE: "Blah"
