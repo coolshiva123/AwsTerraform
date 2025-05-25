@@ -15,3 +15,10 @@ spec:
   syncPolicy:
     syncOptions:
       - CreateNamespace=true 
+  ignoreDifferences:
+    - group: ""
+      kind: ConfigMap
+      name: hello-world-config
+      namespace: hw
+      jsonPointers:
+        - /data/APP_VERSION
