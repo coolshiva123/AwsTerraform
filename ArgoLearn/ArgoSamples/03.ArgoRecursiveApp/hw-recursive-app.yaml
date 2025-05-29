@@ -9,9 +9,12 @@ spec:
     repoURL: https://github.com/coolshiva123/AwsTerraform
     targetRevision: HEAD
     path: ArgoLearn/ArgoSamples/04.ArgoRecursiveDeployment
+    directory:
+      recurse: true
   destination:
     server: https://kubernetes.default.svc
     namespace: hwrecursive-app
   syncPolicy:
     syncOptions:
       - CreateNamespace=true 
+  
