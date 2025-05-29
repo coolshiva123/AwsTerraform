@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hw-argo-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/coolshiva123/AwsTerraform
+    targetRevision: HEAD
+    path: ArgoLearn/ArgoSamples/04.ArgoRecursiveDeployment
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: hwrecursive-app
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true 
