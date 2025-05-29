@@ -11,6 +11,9 @@ spec:
     path: ArgoLearn/ArgoSamples/04.ArgoRecursiveDeployment
     directory:
       recurse: true
+    externalvariables:
+      - name: Creator
+        value: "Shiva"
   destination:
     server: https://kubernetes.default.svc
     namespace: hwrecursive-app
