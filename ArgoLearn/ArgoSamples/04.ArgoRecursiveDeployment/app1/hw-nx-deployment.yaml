@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-nx
+  labels:
+    app: hello-world-nx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hello-world-nx
+  template:
+    metadata:
+      labels:
+        app: hello-world-nx
+    spec:
+      containers:
+      - name: hello-world-nx
+        image: nginx:1.27.5
+        ports:
+        - containerPort: 80
