@@ -3,6 +3,8 @@ kind: AppProject
 metadata:
   name: hello-world-errbot
   namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   description: Project for Errbot World app
   sourceRepos:
